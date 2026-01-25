@@ -3,56 +3,64 @@
 <head>
     <title>Prediction Result</title>
     <style>
-        /* Style the body */
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e9eac;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0593a3, #0a4f63);
         }
 
-        /* Style the heading */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            width: 320px;
+        }
+
         h1 {
-            text-align: center;
-            color: #333;
-            margin-top: 20px;
+            margin-bottom: 15px;
+            color: #222;
         }
 
-        /* Style the result paragraph */
         p {
-            text-align: center;
-            font-size: 18px;
-            color: #333;
+            color: #444;
         }
 
-        /* Style the predicted rating */
         h2 {
-            text-align: center;
-            font-size: 24px;
-            color: #555;
-            margin-top: 10px;
+            margin: 20px 0;
+            font-size: 32px;
+            color: #0593a3;
         }
 
-        /* Style the "Go Back" link */
         a {
-            display: block;
-            text-align: center;
+            display: inline-block;
             margin-top: 20px;
+            padding: 10px 20px;
+            background: #0593a3;
+            color: white;
             text-decoration: none;
-            color: #333;
+            border-radius: 8px;
             font-weight: bold;
         }
 
-        /* Style the "Go Back" link on hover */
         a:hover {
-            color: #555;
+            background: #047b89;
         }
     </style>
 </head>
 <body>
+
+<div class="card">
     <h1>Prediction Result</h1>
-    <p>Predicted Rating for the input cartoon moive:</p>
-    <h2>{{ predicted_rating }}</h2>
+    <p>Predicted rating for the given anime:</p>
+    <h2>{{ predicted_rating }}/10 ⭐</h2>
     <a href="/">Go Back</a>
+</div>
+
 </body>
 </html>
